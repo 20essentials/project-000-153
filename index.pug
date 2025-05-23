@@ -1,0 +1,319 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Monalisa Octocat - Css Art
+    meta(name="google" content="notranslate")
+    link(rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon")
+    style.
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+        height: 100dvh;
+        background-color: #224a;
+        background-image: url('assets/git-foto-2.jpg');
+        background-size: 80px;
+        background-repeat: round;
+      }
+
+      .circle-container {
+        --mona-color: #fff;
+        --face-color: #ffc09f;
+        --eyes-color: #b1423a;
+        --always-white: #fff;
+        width: 309px;
+        height: 309px;
+        position: relative;
+        top: 3px;
+        left: -1px;
+        background-color: #000;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media (width <=1000px) {
+          transform: scale(0.7);
+        }
+
+        * {
+          position: absolute;
+        }
+
+        .head,
+        .body,
+        .bottom {
+          background-color: var(--mona-color);
+        }
+
+        .ear {
+          width: 54px;
+          height: 54px;
+        }
+
+        .ear-left {
+          top: 69px;
+          left: 72px;
+          background-color: var(--mona-color);
+          border-left: 11px solid var(--mona-color);
+          border-bottom: 11px solid var(--mona-color);
+          border-radius: 77% 30% 80% 4%;
+          transform: rotate(106deg) scale(1.1);
+        }
+
+        .ear-right {
+          top: 70px;
+          right: 72px;
+          background-color: var(--mona-color);
+          border-left: 11px solid var(--mona-color);
+          border-bottom: 11px solid var(--mona-color);
+          border-radius: 77% 30% 80% 4%;
+          transform: rotate(168deg) scale(1.1);
+        }
+
+        .head {
+          width: 196px;
+          height: 149px;
+          top: 75px;
+          left: 58px;
+          border-radius: 53% 53% 43% 43%;
+
+          .face {
+            width: 80%;
+            height: 80px;
+            background-color: var(--face-color);
+            border-radius: 999px;
+            clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 98%, 0 100%);
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 0 0 20px 0 #0002;
+            visibility: hidden;
+
+            .eye-left {
+              width: 20px;
+              height: 30px;
+              background-color: var(--eyes-color);
+              box-shadow: 0 0 0 6px var(--always-white);
+              border-radius: 50%;
+              left: 24%;
+              top: 40%;
+              transform: translateY(-50%);
+            }
+
+            .eye-right {
+              width: 20px;
+              height: 30px;
+              background-color: var(--eyes-color);
+              box-shadow: 0 0 0 6px var(--always-white);
+              border-radius: 50%;
+              right: 24%;
+              top: 40%;
+              transform: translateY(-50%);
+            }
+
+            &::before {
+              content: '';
+              display: block;
+              width: 9px;
+              height: 9px;
+              position: absolute;
+              background-color: var(--eyes-color);
+              border-radius: 50%;
+              top: 60%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              width: 30px;
+              height: 40px;
+              border: 4px solid var(--eyes-color);
+              border-top-color: transparent;
+              border-inline-color: transparent;
+              position: absolute;
+              border-radius: 50%;
+              top: 60%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        .bigote {
+          visibility: hidden;
+        }
+
+        .bigote-left {
+          transform: rotate(6deg) translateX(-20px);
+          width: 60px;
+          height: 10px;
+          border-top: 3px solid black;
+          background-color: transparent;
+          top: 160px;
+          position: absolute;
+          left: 30px;
+          border-radius: 50%;
+        }
+
+        .bigote-left-top {
+          top: 160px;
+        }
+
+        .bigote-left-bottom {
+          top: 170px;
+        }
+
+        .bigote-right {
+          transform: rotate(-6deg) translateX(-20px);
+          width: 60px;
+          height: 10px;
+          border-top: 3px solid black;
+          background-color: transparent;
+          top: 160px;
+          position: absolute;
+          right: -10px;
+          border-radius: 50%;
+        }
+
+        .bigote-right-top,
+        .bigote-left-top {
+          top: 150px;
+        }
+
+        .bigote-right-center,
+        .bigote-left-center {
+          top: 160px;
+        }
+
+        .bigote-right-bottom,
+        .bigote-left-bottom {
+          top: 170px;
+        }
+
+        .body {
+          width: 76px;
+          height: 86px;
+          top: 217px;
+          left: 118px;
+          border-radius: 32% 32% 0 0;
+
+          * {
+            visibility: hidden;
+          }
+
+          .rectangulo {
+            width: 15px;
+            height: 65px;
+            background-color: black;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -6px;
+            clip-path: polygon(30% 0, 70% 0, 70% 90%, 100% 100%, 0 100%, 30% 90%);
+          }
+
+          .rectangulo-left {
+            width: 14px;
+            height: 65px;
+            background-color: black;
+            left: 10%;
+            bottom: -6px;
+            clip-path: polygon(50% 20%, 100% 0, 100% 100%, 30% 100%, 50% 80%);
+          }
+
+          .rectangulo-right {
+            width: 14px;
+            height: 65px;
+            background-color: black;
+            right: 10%;
+            bottom: -6px;
+            clip-path: polygon(50% 20%, 100% 0, 100% 100%, 30% 100%, 50% 80%);
+            transform: scaleX(-1);
+          }
+        }
+
+        .bottom {
+          bottom: -6px;
+          width: 90px;
+          height: 30px;
+          left: 111px;
+          clip-path: polygon(0 100%, 10% 0%, 90% 0%, 100% 100%);
+          border-radius: 0 0 5px 5px;
+        }
+
+        .tail {
+          width: 70px;
+          height: 53px;
+          background-color: transparent;
+          top: 217px;
+          left: 73px;
+          border-left: 11px solid var(--mona-color);
+          border-bottom: 19px solid var(--mona-color);
+          border-radius: 3% 68% 10% 229%;
+          transform: rotate(-20deg);
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: var(--mona-color);
+            width: 15px;
+            height: 34px;
+            top: -9px;
+            left: -11px;
+            border-radius: 2000px 2000px 2000px 2000px;
+            transform: skew(23deg) rotate(6deg);
+          }
+        }
+
+        &:hover {
+          background-color: #fff;
+          --mona-color: #000;
+
+          .bigote {
+            visibility: visible;
+          }
+
+          .head {
+            .face {
+              visibility: visible;
+            }
+          }
+
+          .body * {
+            visibility: visible;
+            background-color: white;
+          }
+        }
+      }
+  body
+    section.circle-container
+      div.ear.ear-left
+      div.ear.ear-right
+      div.head
+        div.face
+          div.eye-left
+          div.eye-right
+      div.bigote.bigote-right.bigote-right-top
+      div.bigote.bigote-right.bigote-right-bottom
+      div.bigote.bigote-right.bigote-right-center
+      div.bigote.bigote-left.bigote-left-top
+      div.bigote.bigote-left.bigote-left-bottom
+      div.bigote.bigote-left.bigote-left-center
+      div.bottom
+      div.tail
+      div.body
+        div.rectangulo-left
+        div.rectangulo
+        div.rectangulo-right
