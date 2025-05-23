@@ -1,2 +1,0 @@
-- **Reference ⬇️**
-  - [GIT PATTERN](https://www.vecteezy.com/vector-art/19980954-git-branch-icon-line-isolated-on-white-background-black-flat-thin-icon-on-modern-outline-style-linear-symbol-and-editable-stroke-simple-and-pixel-perfect-stroke-vector-illustration)
